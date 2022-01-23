@@ -7,7 +7,6 @@
   width: 100%;
   padding: 4rem 1.5rem;
   color: #fff;
-  /* background-color: #000; */
 }
 
 .navbar__logo {
@@ -60,13 +59,12 @@
   border: none;
   color: inherit;
   position: fixed;
-  /* top: 1rem; */
   right: 2.5rem;
 }
 
-.navbar__burger:hover {
+/* .navbar__burger:hover {
   cursor: pointer;
-}
+} */
 
 .show-nav .burger-bar,
 .show-nav .burger-bar::before,

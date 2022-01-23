@@ -5,6 +5,12 @@
   outline: none;
 }
 
+html,
+body,
+* {
+  cursor: none;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
