@@ -20,6 +20,7 @@
 .show-nav .navbar__logo {
   color: #fff;
   z-index: 10;
+  transition: all 0.5s ease-in-out;
 }
 
 .navbar__links {
