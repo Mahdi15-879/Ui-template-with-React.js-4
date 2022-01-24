@@ -62,7 +62,7 @@ const Body = () => {
           <div className="Body__col-right">
             <h4>
               {image.bodyTitle_1}
-              <span></span>
+              <span>-</span>
               {image.bodyTitle_2}
             </h4>
 

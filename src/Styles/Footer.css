@@ -1,0 +1,42 @@
+.Footer {
+  height: 10vh;
+  background-color: #000;
+}
+
+.Footer__row {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Footer__row h6 {
+  color: rgb(156, 152, 152);
+  font-size: 0.99rem;
+  font-weight: 400;
+}
+
+.Footer__col-right {
+  display: flex;
+  align-items: center;
+}
+
+.Footer__col-right > *:not(:last-child)::after {
+  content: ".";
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .Footer__row h6 {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Footer__row {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}

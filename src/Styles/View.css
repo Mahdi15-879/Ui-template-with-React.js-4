@@ -1,0 +1,14 @@
+.View {
+  height: 90vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.View h1 {
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 600;
+}
