@@ -62,10 +62,6 @@
   right: 2.5rem;
 }
 
-/* .navbar__burger:hover {
-  cursor: pointer;
-} */
-
 .show-nav .burger-bar,
 .show-nav .burger-bar::before,
 .show-nav .burger-bar::after {

@@ -39,4 +39,8 @@
     flex-direction: column;
     justify-content: space-evenly;
   }
+
+  .Footer__row h6 {
+    font-size: 0.5rem;
+  }
 }
