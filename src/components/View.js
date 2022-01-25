@@ -4,9 +4,9 @@ import "../Styles/View.css";
 
 const View = () => {
   return (
-    <div className="View">
+    <section className="View" id="View">
       <h1>View more work.</h1>
-    </div>
+    </section>
   );
 };
 

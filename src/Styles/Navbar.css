@@ -24,8 +24,7 @@
 
 .navbar__links {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   left: 0;
@@ -37,6 +36,30 @@
   visibility: hidden;
   background-color: #000;
   transition: all 0.8s ease-out;
+}
+
+.navbar__links ul:nth-of-type(1) li .navbar__link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__links ul:nth-of-type(1) li .navbar__link span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  transform: translateY(10px);
+}
+
+.navbar__links ul:nth-of-type(1) li .navbar__link:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar__links ul:nth-of-type(2) li .navbar__link {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 .show-nav .navbar__links {
@@ -130,4 +153,33 @@
 
 .show-nav .slideInDown-4 {
   transition: all 1.4s ease-out;
+}
+
+.show-nav .slideInDown-5 {
+  transition: all 1.5s ease-out;
+}
+
+.show-nav .slideInDown-6 {
+  transition: all 1.6s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 4rem 0.5rem;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .navbar__link {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  .navbar__links ul:nth-of-type(1) li .navbar__link span {
+    opacity: 1;
+  }
 }

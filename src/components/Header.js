@@ -5,7 +5,7 @@ import "../Styles/Header.css";
 
 const Header = () => {
   return (
-    <div className="Header">
+    <section className="Header" id="Header">
       <h3>Plastic is an award-winning international agency.</h3>
       <h1>We create remarkable</h1>
       <h1>
@@ -22,7 +22,7 @@ const Header = () => {
         />
       </h1>
       <button>Our showreel</button>
-    </div>
+    </section>
   );
 };
 

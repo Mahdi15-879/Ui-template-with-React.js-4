@@ -1,6 +1,7 @@
 .Body {
   width: 70%;
   margin: auto;
+  scroll-snap-align: start;
 }
 
 .Body__row {

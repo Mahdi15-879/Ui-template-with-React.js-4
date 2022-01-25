@@ -11,6 +11,12 @@ body,
   cursor: none;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
