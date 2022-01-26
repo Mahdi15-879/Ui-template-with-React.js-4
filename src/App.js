@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -55,18 +55,15 @@ const images = [
 function App() {
   const [offset, setOffset] = useState();
 
-  const handleScroll = () => setOffset(window.pageYOffset);
-
-  window.addEventListener("scroll", handleScroll);
-
   const sections = document.querySelectorAll(".App section");
 
   window.addEventListener("scroll", () => {
+    setOffset(window.pageYOffset);
     let current = "";
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      if (offset >= sectionTop - sectionHeight / 3) {
+      if (offset > sectionTop - sectionHeight / 3) {
         current = section.getAttribute("id");
       }
     });
