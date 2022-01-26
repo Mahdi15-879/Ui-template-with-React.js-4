@@ -4,12 +4,9 @@ import "../Styles/Body.css";
 
 const Body = ({ imgUrl, bodyTitle_1, bodyTitle_2, bodyDes, bgColor, id }) => {
   return (
-    <section className="Body" id={id}>
+    <section className={`Body ${id}`} id={id}>
       <div className="Body__row">
-        <div
-          className="Body__col-left"
-          style={{ background: `${bgColor}` }}
-        >
+        <div className="Body__col-left" style={{ background: `${bgColor}` }}>
           <figure>
             <img src={require(`../images/${imgUrl}`)} alt="Banner" />
           </figure>

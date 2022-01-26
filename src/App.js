@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -53,6 +53,32 @@ const images = [
 ];
 
 function App() {
+  const [offset, setOffset] = useState();
+
+  const handleScroll = () => setOffset(window.pageYOffset);
+
+  window.addEventListener("scroll", handleScroll);
+
+  const sections = document.querySelectorAll(".App section");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (offset >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    sections.forEach((section) => {
+      section.classList.remove("active");
+      if (section.classList.contains(current)) {
+        section.classList.add("active");
+      }
+    });
+  });
+
   return (
     <div className="App">
       <CustomCursor />

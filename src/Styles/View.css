@@ -12,10 +12,20 @@
   color: #fff;
   font-size: 7rem;
   font-weight: 600;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s linear;
+}
+
+.active h1 {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media only screen and (max-width: 768px) {
   .View h1 {
     font-size: 5rem;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
