@@ -17,7 +17,8 @@
   color: #000;
 }
 
-.show-nav .navbar__logo {
+.show-nav .navbar__logo,
+.navOnView .navbar__logo {
   color: #fff;
   z-index: 10;
   transition: all 0.5s ease-in-out;
@@ -88,7 +89,10 @@
 
 .show-nav .burger-bar,
 .show-nav .burger-bar::before,
-.show-nav .burger-bar::after {
+.show-nav .burger-bar::after,
+.navOnView .burger-bar,
+.navOnView .burger-bar::before,
+.navOnView .burger-bar::after {
   background-color: #fff;
 }
 

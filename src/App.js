@@ -54,6 +54,7 @@ const images = [
 
 function App() {
   const [offset, setOffset] = useState();
+  const [navOnView, setNavOnView] = useState(false);
 
   const sections = document.querySelectorAll(".App section");
 
@@ -72,6 +73,11 @@ function App() {
       section.classList.remove("active");
       if (section.classList.contains(current)) {
         section.classList.add("active");
+        if (current === "View") {
+          setNavOnView(true);
+        } else {
+          setNavOnView(false);
+        }
       }
     });
   });
@@ -79,7 +85,7 @@ function App() {
   return (
     <div className="App">
       <CustomCursor />
-      <Navbar />
+      <Navbar onView={navOnView} />
       <Header />
       {images.map((image) => (
         <Body

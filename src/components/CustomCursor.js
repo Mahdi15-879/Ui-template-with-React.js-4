@@ -14,7 +14,7 @@ const CustomCursor = () => {
     });
   }, []);
 
-  return <div className="CustomCursor" ref={cursorRef}></div>;
+  return <div className="CustomCursor" ref={cursorRef}>scroll</div>;
 };
 
 export { CustomCursor };

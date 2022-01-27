@@ -15,6 +15,7 @@ html {
   scroll-snap-type: y mandatory;
   overflow: scroll;
   overflow-x: hidden;
+  background-color: #fff;
 }
 
 body {

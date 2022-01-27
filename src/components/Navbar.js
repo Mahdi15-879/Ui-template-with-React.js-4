@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "../Styles/Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ onView }) => {
   const [showNav, setShowNav] = useState(false);
 
   const handleShowNav = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${showNav && "show-nav"}`}>
+    <nav className={`navbar ${showNav && "show-nav"} ${onView && "navOnView"}`}>
       <div className="navbar__logo">Plastic.</div>
       <div className="navbar__links">
         <ul>
