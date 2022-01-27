@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -53,33 +53,34 @@ const images = [
 ];
 
 function App() {
-  const [offset, setOffset] = useState();
   const [navOnView, setNavOnView] = useState(false);
 
-  const sections = document.querySelectorAll(".App section");
-
-  window.addEventListener("scroll", () => {
-    setOffset(window.pageYOffset);
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (offset > sectionTop - sectionHeight / 3) {
-        current = section.getAttribute("id");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
       }
     });
+  });
 
-    sections.forEach((section) => {
-      section.classList.remove("active");
-      if (section.classList.contains(current)) {
-        section.classList.add("active");
-        if (current === "View") {
-          setNavOnView(true);
-        } else {
-          setNavOnView(false);
-        }
+  const viewObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setNavOnView(true);
+      } else {
+        setNavOnView(false);
       }
     });
+  });
+
+  useEffect(() => {
+    document
+      .querySelectorAll(".App section")
+      .forEach((section) => observer.observe(section));
+    viewObserver.observe(document.getElementById("View"));
+    console.log(navOnView);
   });
 
   return (
